@@ -110,13 +110,13 @@ end
 puts "Please enter the world size"
 world_height, world_width = gets.chomp.split(" ").map { |s| s.to_i }
 mars_rover = Rover.new(world_width, world_height)
-loop do
-	puts "enter the starting position of the rover or hit enter to quit"
+	puts "enter the starting position of the rover or hit enter to quit:"
 	x, y, direction = prompt.split(" ")
 	x = x.to_i
 	y = y.to_i
 	mars_rover.set_position(x, y, direction)
-	puts "enter rover commands pls"
+loop do
+	puts "enter rover commands pls or hit enter to quit:"
 	instructions = prompt.upcase
 	instructions.each_char do |character|
 		mars_rover.read_instruction(character)
